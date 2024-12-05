@@ -106,3 +106,11 @@ def create_barplot_error(df_control, df_test, category):
     # Mostrar gráfico
     plt.tight_layout()
     plt.show()
+    
+def without_error(df):
+    
+    error_count = df.groupby('visit_id')['is_error'].sum()
+    valid_id = error_count[error_count == 0].index
+    df_without_error = df[df['visit_id'].isin(valid_id)]
+    
+    return df_without_error
