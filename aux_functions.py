@@ -126,3 +126,33 @@ def t_student(df_test, df_control, columna):
         resultado = "No rechazamos la hipótesis nula: no hay diferencia significativa."
     
     return t_stat, p_value, resultado
+
+def verificar_aleatorizacion(df, columna_caracteristica):
+    valores_test = df[df['Variation'] == 'Test'][columna_caracteristica]
+    valores_control = df[df['Variation'] == 'Control'][columna_caracteristica]
+    t_stat, p_value = st.ttest_ind(valores_test, valores_control, equal_var=False)
+    
+    print(f"Estadístico t: {t_stat}")
+    print(f"p-valor: {p_value}")
+    
+    if p_value < 0.05:
+        print(f"Hay diferencias significativas en la característica '{columna_caracteristica}' entre los grupos.")
+    else:
+        print(f"No hay diferencias significativas en la característica '{columna_caracteristica}' entre los grupos.")
+    
+    return t_stat, p_value
+
+def verificar_tamano_grupos(df):
+    count_test = df[df['Variation'] == 'Test'].shape[0]
+    count_control = df[df['Variation'] == 'Control'].shape[0]
+    
+    print(f"Número de usuarios en el grupo Test: {count_test}")
+    print(f"Número de usuarios en el grupo Control: {count_control}")
+    diferencia = abs(count_test - count_control)
+    
+    if diferencia > 0:
+        print(f"Los grupos no están perfectamente balanceados. La diferencia es de {diferencia} usuarios.")
+    else:
+        print("Los grupos están equilibrados en cuanto a tamaño.")
+    
+    return count_test, count_control, diferencia
