@@ -114,3 +114,15 @@ def without_error(df):
     df_without_error = df[df['visit_id'].isin(valid_id)]
     
     return df_without_error
+    
+def t_student(df_test, df_control, columna):
+    grupo_test= df_test[columna]
+    grupo_control = df_control[columna]
+    t_stat, p_value = st.ttest_ind(grupo_test, grupo_control, equal_var=False)
+    
+    if p_value < 0.05:
+        resultado = "Rechazamos la hipótesis nula: son significativamente diferentes."
+    else:
+        resultado = "No rechazamos la hipótesis nula: no hay diferencia significativa."
+    
+    return t_stat, p_value, resultado
