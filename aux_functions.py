@@ -156,3 +156,33 @@ def verificar_tamano_grupos(df):
         print("Los grupos están equilibrados en cuanto a tamaño.")
     
     return count_test, count_control, diferencia
+
+def chi_square_hypothesis(crosstab_result, alpha=0.05):
+    """
+    Performs a Chi-square test of independence.
+
+    Parameters:
+    crosstab_result: pd.DataFrame
+        A contingency table that contains the observed frequencies.
+    alpha: float, optional
+        The significance level for the test (default is 0.05).
+
+    Returns:
+    dict
+        A dictionary with the test results, including the Chi-square statistic,
+        p-value, hypothesis decision, and degrees of freedom.
+    """
+    # Realizar la prueba de Chi-cuadrado
+    chi2_statistic, chi2_p_value, dof, expected = chi2_contingency(crosstab_result)
+
+    # Decisión sobre la hipótesis
+    if chi2_p_value < alpha:
+        conclusion = "Rechazamos la hipótesis nula. Las variables están asociadas."
+    else:
+        conclusion = "No rechazamos la hipótesis nula. Las variables son independientes."
+
+    # Retornar los resultados
+    return {
+        'chi2_statistic': chi2_statistic,"\n"'p_value': chi2_p_value,"\n"'degrees_of_freedom': dof,"\n"'conclusion': conclusion
+    }
+
