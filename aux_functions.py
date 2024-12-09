@@ -4,6 +4,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt 
 import seaborn as sns
+import scipy.stats as st
+import scipy.stats as stats
+from statsmodels.stats.proportion import proportions_ztest
+from scipy.stats import chi2_contingency
+
+
 
 
 def create_frequency_table(df_control, df_test,name):
@@ -37,6 +43,7 @@ def time_spent_each_step(df):
     
     df = df.sort_values(by=['client_id', 'visit_id', 'date_time'])
     df['time_spent'] = df.groupby('visit_id')['date_time'].diff()
+
     
     return df
 
@@ -78,10 +85,12 @@ def create_barplot_error(df_control, df_test, category):
     
     df_control = df_control.reset_index()
     df_control.columns = [category, 'error_rate_control']
+    df_control.sort_values(by=category)
 
 
     df_test = df_test.reset_index()
     df_test.columns = [category, 'error_rate_test']
+    df_test.sort_values(by=category)
 
     max_ylim = max(df_control['error_rate_control'].max(), df_test['error_rate_test'].max())*1.1
     # Crear el gráfico con Seaborn
@@ -185,4 +194,29 @@ def chi_square_hypothesis(crosstab_result, alpha=0.05):
     return {
         'chi2_statistic': chi2_statistic,"\n"'p_value': chi2_p_value,"\n"'degrees_of_freedom': dof,"\n"'conclusion': conclusion
     }
+    
+    
 
+def verificar_mejora_umbral(success_rate_test, success_rate_control, umbral=0.05):
+    aumento = success_rate_test - success_rate_control
+    umbral_calculado = umbral * success_rate_control
+    cumple_umbrales = aumento >= umbral_calculado
+
+    return cumple_umbrales, aumento, umbral_calculado
+
+def remove_outliers(data, col):
+    Q3 = np.quantile(data[col], 0.75)
+    Q1 = np.quantile(data[col], 0.25)
+    IQR = Q3 - Q1
+    
+    # Define bounds for the outliers
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+    
+    print("Lower Bound:", lower_bound)
+    print("Upper Bound:", upper_bound)
+    
+    # Filter the DataFrame based on the condition
+    filtered_data = data[(data[col] > lower_bound) & (data[col] < upper_bound)]
+
+    return filtered_data
