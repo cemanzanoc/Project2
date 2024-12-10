@@ -41,8 +41,13 @@ def step_rate(df, state):
 
 def time_spent_each_step(df):
     
+    
+    step_order = {'start': 0, 'step_1': 1, 'step_2': 2, 'step_3': 3, 'confirm': 4}
+    df['step_order'] = df['process_step'].map(step_order)
     df = df.sort_values(by=['client_id', 'visit_id', 'date_time'])
     df['time_spent'] = df.groupby('visit_id')['date_time'].diff()
+    df = df.sort_values(by=['client_id', 'visit_id', 'step_order'])
+    df['time_spent'] = df.groupby(by = 'visit_id')['time_spent'].shift(-1)
 
     
     return df
