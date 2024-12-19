@@ -43,12 +43,12 @@ The experiment utilized an A/B testing approach, comparing a control group that 
 
 ## Tools Used 🛠️
 
-- 🐍 **Python**: 
-- 🐼 **Pandas**: 
-- 📊 **Matplotlib & Seaborn**:
--  **Power BI**
-- 📓 **Jupyter Notebooks**: 
-- 🌐 **Git**: 
+- 🐍 **Python**: Main programming language used for data processing and analysis.
+- 🐼 **Pandas**: Library for data manipulation and analysis.
+- 📊 **Matplotlib & Seaborn**: Libraries for data visualization.
+- 📈 **Power BI**: Tool for creating interactive dashboards and visualizing data insights.
+- 📓 **Jupyter Notebooks**: Interactive environment for data cleaning and visualization.
+- 🌐 **Git**: Version control system for tracking changes and collaboration.
 
 ## Development Process 🚀
 
