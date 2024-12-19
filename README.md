@@ -2,6 +2,13 @@
 
 ![Descripción de la imagen](Vanguard-Emblem.png) 
 
+## Project Overview 
+
+This project focuses on analyzing the outcomes of a digital experiment conducted by Vanguard, a leading investment management firm based in the United States. The objective is to evaluate whether a modernized and more intuitive user interface (UI), combined with timely contextual cues, can enhance online process completion rates for Vanguard customers.
+
+The experiment utilized an A/B testing approach, comparing a control group that interacted with the traditional UI to a test group that used the redesigned UI. By examining the data collected from this experiment, the goal is to assess whether the updated UI contributed to a better user experience and increased process completion rates.
+
+
 **Insights from our study on ..**
 
 
@@ -22,7 +29,10 @@
 
         - ....................
           
- 
+
+## Relevant AB Testing Results in Power BI
+
+-- Display video
 
 
 ## Functionality ⚙️
