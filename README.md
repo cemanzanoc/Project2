@@ -1,4 +1,4 @@
-# Vanguard ab test
+# Vanguard A/B Test
 
 ![Descripción de la imagen](Vanguard-Emblem.png) 
 
