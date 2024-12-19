@@ -1,5 +1,6 @@
 # Vanguard ab test
 
+![Descripción de la imagen](Vanguard-Emblem.png) 
 
 **Insights from our study on ..**
 
