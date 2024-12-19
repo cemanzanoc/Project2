@@ -57,8 +57,7 @@ The experiment utilized an A/B testing approach, comparing a control group that 
 3. 📊 **Data Visualization**: Power BI
 
 
-## Entity Relation Model 
-![Descripción de la imagen](EDR_relation_sleep_and_mental_health.PNG)
+
 
 ## Conclusion 📊
 Through comprehensive analysis, the project reveals critical insights:
