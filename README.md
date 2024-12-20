@@ -9,37 +9,50 @@ This project focuses on analyzing the outcomes of a digital experiment conducted
 The experiment utilized an A/B testing approach, comparing a control group that interacted with the traditional UI to a test group that used the redesigned UI. By examining the data collected from this experiment, the goal is to assess whether the updated UI contributed to a better user experience and increased process completion rates.
 
 
-**Insights from our study on ..**
+**Insights from our study**
 
 
-- **Objective**: 
+- **Objective**: Increase task completion rates for online processes by enhancing user experience through an updated UI and contextual messaging.
 - **Focus Areas**:
-  - ..................
-  - .................
-  - .............
+  - Completion rates comparison between test and control groups.
+  - Analysis of error rates and time spent on steps.
+  - Validation of hypothesis testing results.
 - **Key Findings**
-    - **.................**
-      
-       *..............*
-
-        - .............
-        - .................
+    - **Completion Rates:**
+        - *Test Group:* 67.53%
+        - *Control Group:* 49.82%
           
-       *..........................*
+      The updated UI led to a statistically significant improvement in task completion rates.
 
-        - ....................
+    - **Error Rates:**
+        - The error rates were consistent between groups, showing no significant increase in navigation issues.
+
+     - **Time Spent on Steps:**
+        - *Test Group:* Average of 95 seconds per step.
+        - *Control Group:* Average of 87 seconds per step.
+      
+      Slightly higher engagement time in the test group may indicate increased interaction with the contextual cues.
           
 
 ## Relevant AB Testing Results in Power BI
 
 ![Visualización de Power BI](power-bi-visualization.gif)
 
+The Power BI dashboard provides a comprehensive visualization of:
+
+- Completion rates.
+
+- Error rates.
+
+- Time spent across steps.
+
+- Demographics comparison (age, gender, account balance, and tenure).
+
 
 ## Functionality ⚙️
 
-- 🧹 **Data Structure**: 
-- 🔍 **Data Querying**: 
-- 📈 **Data Visualization**: 
+- 🧹 **Data Structure**: Organized datasets from client profiles, digital footprints, and experiment rosters were cleaned and merged into a unified dataset.
+- 📈 **Data Visualization**: Insights were visualized using Power BI to illustrate trends and support hypothesis validation.
 
 ## Tools Used 🛠️
 
@@ -52,9 +65,9 @@ The experiment utilized an A/B testing approach, comparing a control group that 
 
 ## Development Process 🚀
 
-1. 🧹 **Data Cleaning**: Focus on create new variables to identify better the client profile.
-2. 🔍 **Data Analysis**: 
-3. 📊 **Data Visualization**: Power BI
+1. 🧹 **Data Cleaning**: Focus on creating new variables to better identify better client profile.
+2. 🔍 **Data Analysis**: Conducted hypothesis testing and explored relationships between variables.
+3. 📊 **Data Visualization**:  Power BI dashboards were used to communicate findings effectively.
 
 
 
@@ -62,9 +75,9 @@ The experiment utilized an A/B testing approach, comparing a control group that 
 ## Conclusion 📊
 Through comprehensive analysis, the project reveals critical insights:
 
-1. 
-2. 
-3. 
+1. The redesigned UI significantly improves completion rates, confirming the hypothesis.
+2. Error rates remain stable, indicating that the changes did not introduce additional navigational challenges.
+3. Slightly longer engagement times suggest that contextual cues encouraged users to explore their options more thoroughly.
 
 
 
