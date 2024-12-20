@@ -30,7 +30,8 @@ The experiment utilized an A/B testing approach, comparing a control group that 
      - **Time Spent on Steps:**
         - *Test Group:* Average of 95 seconds per step.
         - *Control Group:* Average of 87 seconds per step.
-      Slightly higher engagement time in the test group may indicate increased interaction with the contextual cues.
+
+    Slightly higher engagement time in the test group may indicate increased interaction with the contextual cues.
           
 
 ## Relevant AB Testing Results in Power BI
