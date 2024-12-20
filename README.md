@@ -32,7 +32,7 @@ The experiment utilized an A/B testing approach, comparing a control group that 
 
 ## Relevant AB Testing Results in Power BI
 
-![Descripción de la imagen](power-bi-visualization_g6hRM5BP.mp4) 
+[Ver video](power-bi-visualization_g6hRM5BP.mp4) 
 
 
 ## Functionality ⚙️
