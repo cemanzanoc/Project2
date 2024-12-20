@@ -32,7 +32,7 @@ The experiment utilized an A/B testing approach, comparing a control group that 
 
 ## Relevant AB Testing Results in Power BI
 
--- Display video
+![Descripción de la imagen](Vanguard-Emblem.png) 
 
 
 ## Functionality ⚙️
